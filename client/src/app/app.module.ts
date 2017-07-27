@@ -10,6 +10,8 @@ import {SecurityModule} from "./security/security.module";
 import {routerModule} from "./app.routing";
 import {SecurityGuard} from "./security/security.guard";
 import {HomeModule} from "./home/home.module";
+import {Reservationservice} from "./reservation/reservation.service";
+import {ReservationModule} from "./reservation/reservation.module";
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import {HomeModule} from "./home/home.module";
     UsersModule,
     SecurityModule,
     HomeModule,
-    routerModule
+    routerModule,
+    ReservationModule
 
   ],
   providers: [
     SecurityService,
     Api,
     SecurityGuard,
-    UsersService
+    UsersService,
+    Reservationservice
   ],
   bootstrap: [AppComponent]
 })

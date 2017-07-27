@@ -1,0 +1,25 @@
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+    <tr *ngFor="let reservation of reservations">
+      <td>{{reservation.id}}</td>
+      <td>{{reservation.beginDate}}</td>
+      <td>{{reservation.parking.location}}</td>
+    </tr>
+  </table>
+
+  <form #loginForm="ngForm" novalidate="true" (ngSubmit)="addReservation()">
+    Czas poczatkowy:<br>
+    <input type="text" name="beginDate" [(ngModel)]="reservation.beginDate" required>
+    <br>
+    Czas koncowy:<br>
+    <input type="text" name="endDate" [(ngModel)]="reservation.endDate" required>
+    <br>
+
+    <div>
+      <button>Add reservation</button>
+    </div>
+
+  </form>

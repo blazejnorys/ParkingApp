@@ -16,6 +16,14 @@ import java.util.Set;
 @Data
 public class User implements Serializable, UserDetails {
 
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
+
+    public User() {
+    }
+
     @Id
     @GeneratedValue
     private Long id;

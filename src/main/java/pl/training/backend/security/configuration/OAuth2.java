@@ -33,6 +33,9 @@ public class OAuth2 {
                     .antMatchers(PUBLIC_URIS).permitAll()
                     .antMatchers(POST, "/api-v1/profile").permitAll()
                     .antMatchers(POST, "/api-v1/register").permitAll()
+                    .antMatchers(POST, "/api-v1/reservation").permitAll()
+                    .antMatchers(GET, "/api-v1/reservation").permitAll()
+                    .antMatchers(POST, "/api-v1/parking").permitAll()
                     .antMatchers(POST, USERS_URI).permitAll()
                     .antMatchers(GET, ACTIVE_USER_URI).authenticated()
                     .antMatchers(ALL_URIS).hasRole(Role.ADMIN.name());

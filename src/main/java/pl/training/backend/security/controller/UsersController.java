@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.training.backend.common.model.Mapper;
 import pl.training.backend.common.model.ResultPage;
 import pl.training.backend.common.web.UriBuilder;
+import pl.training.backend.profiles.dto.ProfileDto;
 import pl.training.backend.security.dto.UserDto;
 import pl.training.backend.security.dto.UsersPageDto;
 import pl.training.backend.security.entity.User;
@@ -48,7 +49,9 @@ public class UsersController {
     @RequestMapping(value = "active", method = RequestMethod.GET)
     public UserDto getUser(OAuth2Authentication authentication) {
         User user = (User) authentication.getPrincipal();
-        return mapper.map(user, UserDto.class);
+        UserDto userDto = mapper.map(user, UserDto.class);
+        userDto.setProfileDto(mapper.map(user.getProfile(), ProfileDto.class));
+        return userDto;
     }
 
     @ApiOperation(value = "Get users", response = UsersPageDto.class)
