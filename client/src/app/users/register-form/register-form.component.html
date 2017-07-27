@@ -1,0 +1,24 @@
+<form #loginForm="ngForm" novalidate="true" (ngSubmit)="register()">
+  Login:<br>
+  <input type="text" name="login" [(ngModel)]="profile.login" required>
+  <br>
+  Password:<br>
+  <input type="password" name="password" [(ngModel)]="profile.password" required>
+  <br>
+  Name:<br>
+  <input type="text" name="name" [(ngModel)]="profile.profileDto.name" required>
+  <br>
+  Surname:<br>
+  <input type="text" name="surname" [(ngModel)]="profile.profileDto.surname" required>
+  <br>
+
+  <div>
+    <button>Register</button>
+  </div>
+
+</form>
+
+
+<!--<div *ngIf="loginError">-->
+  <!--Invalid User or password-->
+<!--</div>-->
