@@ -1,21 +1,62 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-<form #loginForm="ngForm" novalidate="true" (ngSubmit)="login()">
-  Login:<br>
-  <input type="text" name="login" [(ngModel)]="username" required>
-  <br>
-  Password:<br>
-  <input type="password" name="password" [(ngModel)]="password" required>
-  <br><br>
-  <div>
-    <button [disabled]="loginForm.invalid || pendingRequest">Login</button>
-  </div>
-
-
-</form>
-<input type="button" value="This is button link" onclick="window.location.href='../register'">
-
-<div *ngIf="loginError">
-  Invalid User or password
+<div class="collapse navbar-collapse" id="nav-content" >
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>login</b> <span class="caret"></span></a>
+  <ul id="login-dp" class="dropdown-menu" >
+    <li>
+      <div class="row">
+        <div class="col-md-12">
+          Login via
+          <div class="social-buttons">
+            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+          </div>
+          or
+          <form class="form"  accept-charset="UTF-8" id="login-nav" #loginForm="ngForm" novalidate="true" (ngSubmit)="login()">
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail2">Email address</label>
+              <input type="text" class="form-control" id="exampleInputEmail2" placeholder="username" name="username" [(ngModel)]="username" required>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="exampleInputPassword2">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="password" name="password" [(ngModel)]="password" required>
+              <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> keep me logged-in
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="bottom text-center">
+          New here ? <a href="register"><b>Join Us</b></a>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>
+
+
+
+
+<!--<form #loginForm="ngForm" novalidate="true" (ngSubmit)="login()">-->
+  <!--Login:<br>-->
+  <!--<input type="text" name="login" [(ngModel)]="username" required>-->
+  <!--<br>-->
+  <!--Password:<br>-->
+  <!--<input type="password" name="password" [(ngModel)]="password" required>-->
+  <!--<br><br>-->
+  <!--<div>-->
+    <!--<button [disabled]="loginForm.invalid || pendingRequest">Login</button>-->
+  <!--</div>-->
+
+
+<!--</form>-->
+<!--<input type="button" value="This is button link" onclick="window.location.href='../register'">-->
+
+<!--<div *ngIf="loginError">-->
+  <!--Invalid User or password-->
+<!--</div>-->

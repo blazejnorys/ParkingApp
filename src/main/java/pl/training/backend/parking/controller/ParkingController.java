@@ -6,17 +6,17 @@ import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.training.backend.common.model.Mapper;
+import pl.training.backend.common.model.ResultPage;
 import pl.training.backend.common.web.UriBuilder;
 import pl.training.backend.parking.dto.ParkingDto;
+import pl.training.backend.parking.dto.ParkingPageDto;
 import pl.training.backend.parking.entity.Parking;
 import pl.training.backend.parking.service.ParkingService;
 
 import java.net.URI;
+import java.util.List;
 
 import static org.springframework.http.ResponseEntity.created;
 
@@ -46,6 +46,16 @@ public class ParkingController {
         parkingService.addParking(parking);
         URI uri = uriBuilder.requestUriWithId(parking.getId());
         return created(uri).build(); //standard do zwracania nagłówko z http
+    }
+
+    @ApiOperation(value = "Get all car parkings", response = ParkingPageDto.class)
+    @RequestMapping(method = RequestMethod.GET)
+    public ParkingPageDto getAllParkings(
+            @RequestParam(required = false, defaultValue = "0", name = "pageNumber") int pageNumber,
+            @RequestParam(required = false, defaultValue = "10", name = "pageSize") int pageSize) {
+        ResultPage<Parking> resultPage = parkingService.getAllParkings(pageNumber, pageSize);
+        List<ParkingDto> parkingDto = mapper.map(resultPage.getContent(), ParkingDto.class);
+        return new ParkingPageDto(parkingDto, resultPage.getPageNumber(), resultPage.getTotalPages());
     }
 
 }

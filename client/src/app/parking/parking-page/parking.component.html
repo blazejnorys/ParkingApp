@@ -1,0 +1,18 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<div class="container">
+  <table class="table">
+    <tr class="active">
+      <th>ID</th>
+      <th>Parking lokalizacja</th>
+      <th>Parking nazwa</th>
+    </tr>
+    <tr class="active" *ngFor="let parking of parkings">
+      <td>{{parking.id}}</td>
+      <td>{{parking.location}}</td>
+      <td>{{parking.name}}</td>
+      <td><button class="btn btn-primary" routerLink="../newReservation/{{parking.id}}">Order</button></td>
+    </tr>
+  </table>
+</div>

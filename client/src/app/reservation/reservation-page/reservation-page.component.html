@@ -3,10 +3,10 @@
 <div class="reservation">
 <form #loginForm="ngForm" novalidate="true" (ngSubmit)="addReservation()">
     Czas poczatkowy:<br>
-    <input type="text" name="beginDate" [(ngModel)]="reservation.beginDate" required>
+    <input type="text" name="beginDate" placeholder="begin time" [(ngModel)]="reservation.beginDate" required>
     <br>
     Czas koncowy:<br>
-    <input type="text" name="endDate" [(ngModel)]="reservation.endDate" required>
+    <input type="text" name="endDate" placeholder="end time" [(ngModel)]="reservation.endDate" required>
     <br>
 
     <div class="add-button">

@@ -5,6 +5,8 @@ import {SecurityGuard} from "./security/security.guard";
 import {RegisterFormComponent} from "./users/register-form/register-form.component";
 import {HomePageComponent} from "./home/home-page/home-page.component";
 import {ReservationPageComponent} from "./reservation/reservation-page/reservation-page.component";
+import {ParkingComponent} from "./parking/parking-page/parking.component";
+import {NewReservationComponent} from "./reservation/new-reservation/new-reservation.component";
 
 
 const routesConfig = [
@@ -16,6 +18,12 @@ const routesConfig = [
   },
   {
     path: 'register', component: RegisterFormComponent
+  },
+  {
+    path: 'parking', component: ParkingComponent
+  },
+  {
+    path: 'newReservation/:id', component: NewReservationComponent,  canActivate: [SecurityGuard]
   },
   {
     path: 'home', component: HomePageComponent, canActivate: [SecurityGuard]

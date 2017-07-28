@@ -4,6 +4,7 @@ export class Api {
   activeUser = 'http://localhost:8080/api-v1/users/active'
   registerUser = 'http://localhost:8080/api-v1/profile'
   reservationPage = 'http://localhost:8080/api-v1/reservation'
+  parkingPage = 'http://localhost:8080/api-v1/parking'
 
 
 }

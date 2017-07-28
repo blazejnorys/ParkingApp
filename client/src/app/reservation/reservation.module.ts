@@ -4,6 +4,8 @@ import { ReservationPageComponent } from './reservation-page/reservation-page.co
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import {RouterModule} from "@angular/router";
+import { HoursListComponent } from './hours-list/hours-list.component';
+import { NewReservationComponent } from './new-reservation/new-reservation.component';
 
 @NgModule({
   imports: [
@@ -12,7 +14,7 @@ import {RouterModule} from "@angular/router";
     FormsModule,
     RouterModule
   ],
-  exports: [ReservationPageComponent],
-  declarations: [ReservationPageComponent]
+  exports: [ReservationPageComponent,HoursListComponent, NewReservationComponent],
+  declarations: [ReservationPageComponent, HoursListComponent, NewReservationComponent]
 })
 export class ReservationModule { }

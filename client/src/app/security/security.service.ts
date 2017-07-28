@@ -65,6 +65,8 @@ export class SecurityService {
     payload.set('password', password)
     payload.set('grant_type', 'password')
     payload.set('client_id', 'connect-app')
+    console.log("######################################")
+    console.log(payload)
     return payload
   }
 

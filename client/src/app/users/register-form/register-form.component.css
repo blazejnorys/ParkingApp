@@ -1,0 +1,35 @@
+.form {
+  padding-top: 300px;
+}
+
+.container {
+  padding-top: 700px;
+}
+
+.reg{
+  font-size: 20px;
+  color:lightseagreen;
+  padding-top: 50px;
+  margin-left:50px;
+  width:230px;
+
+}
+.add-button {
+  padding-top: 50px;
+  text-align: center;
+}
+.input {
+  background-color: #7f8c8d;
+
+}
+.btn{
+  font-size:20px;
+  height:40px;
+  width: auto;
+  background-color: lightseagreen;
+
+}
+
+.table{
+  background-color: black !important;
+}

@@ -1,23 +1,26 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="reg">
 <form #loginForm="ngForm" novalidate="true" (ngSubmit)="register()">
-  Login:<br>
-  <input type="text" name="login" [(ngModel)]="profile.login" required>
+  login:<br>
+  <input type="text" name="login" placeholder="login" [(ngModel)]="profile.login" required>
   <br>
-  Password:<br>
-  <input type="password" name="password" [(ngModel)]="profile.password" required>
+  password:<br>
+  <input type="password" name="password" placeholder="password" [(ngModel)]="profile.password" required>
   <br>
-  Name:<br>
-  <input type="text" name="name" [(ngModel)]="profile.profileDto.name" required>
+  name:<br>
+  <input type="text" name="name" placeholder="name" [(ngModel)]="profile.profileDto.name" required>
   <br>
-  Surname:<br>
-  <input type="text" name="surname" [(ngModel)]="profile.profileDto.surname" required>
+  surname:<br>
+  <input type="text" name="surname" placeholder="surname" [(ngModel)]="profile.profileDto.surname" required>
   <br>
 
-  <div>
-    <button>Register</button>
+  <div class="add-button">
+    <button class="btn">Register</button>
   </div>
 
 </form>
-
+</div>
 
 <!--<div *ngIf="loginError">-->
   <!--Invalid User or password-->
