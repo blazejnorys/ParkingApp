@@ -1,0 +1,31 @@
+.form {
+  padding-top: 300px;
+}
+
+.container {
+  padding-top: 700px;
+}
+
+.reservation{
+  font-size: 20px;
+  color:lightseagreen;
+  padding-top: 50px;
+  margin-left:50px;
+
+}
+.add-button {
+  padding-top: 50px;
+}
+.input {
+  background-color: #7f8c8d;
+}
+.btn{
+  font-size:20px;
+  height:40px;
+  width: auto;
+  background-color: #7f8c8d;
+}
+
+.table{
+  background-color: black !important;
+}

@@ -1,16 +1,7 @@
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-    </tr>
-    <tr *ngFor="let reservation of reservations">
-      <td>{{reservation.id}}</td>
-      <td>{{reservation.beginDate}}</td>
-      <td>{{reservation.parking.location}}</td>
-    </tr>
-  </table>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-  <form #loginForm="ngForm" novalidate="true" (ngSubmit)="addReservation()">
+<div class="reservation">
+<form #loginForm="ngForm" novalidate="true" (ngSubmit)="addReservation()">
     Czas poczatkowy:<br>
     <input type="text" name="beginDate" [(ngModel)]="reservation.beginDate" required>
     <br>
@@ -18,8 +9,31 @@
     <input type="text" name="endDate" [(ngModel)]="reservation.endDate" required>
     <br>
 
-    <div>
-      <button>Add reservation</button>
+    <div class="add-button">
+      <button class="btn">Add reservation</button>
     </div>
 
-  </form>
+</form>
+
+
+<div class="container">
+    <table class="table">
+      <tr class="active">
+        <th>ID</th>
+       <th>Czas początkowy</th>
+       <th>Czas końcowy</th>
+       <th>Parking lokalizacja</th>
+       <th>Parking nazwa</th>
+       <th>Nazwisko wynajmującego</th>
+      </tr>
+      <tr class="active" *ngFor="let reservation of reservations">
+        <td>{{reservation.id}}</td>
+        <td>{{reservation.beginDate}}</td>
+        <td>{{reservation.endDate}}</td>
+        <td>{{reservation.parking.location}}</td>
+        <td>{{reservation.parking.name}}</td>
+        <td>{{reservation.user.profile.name}}</td>
+      </tr>
+  </table>
+  </div>
+</div>
