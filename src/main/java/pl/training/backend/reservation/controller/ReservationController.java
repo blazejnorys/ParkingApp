@@ -47,11 +47,12 @@ public class ReservationController {
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity createReservation(
             @ApiParam(name = "reservation")
-            @RequestBody ReservationDto reservationDto,
-            @RequestParam(value = "parkingId", required = true) Long parkingId)  {
+            @RequestBody ReservationDto reservationDto)
+//            @RequestParam(value = "parkingId", required = true) Long parkingId)
+    {
         Reservation reservation = mapper.map(reservationDto, Reservation.class);
         reservation.setProfile(usersService.getActiveUser().getProfile());
-        reservation.setParking(parkingService.getParkingId(parkingId));
+        reservation.setParking(parkingService.getParkingId(reservationDto.getParking().getId()));
         reservationService.addReservation(reservation);
         URI uri = uriBuilder.requestUriWithId(reservation.getId());
         return created(uri).build();

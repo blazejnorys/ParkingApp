@@ -1,19 +1,21 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <div class="collapse navbar-collapse" id="nav-content" >
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>login</b> <span class="caret"></span></a>
+  <div class="loginForm" *ngIf="!securityService.isAuthenticated()">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>login</b> <span class="caret"></span></a>
   <ul id="login-dp" class="dropdown-menu" >
     <li>
       <div class="row">
         <div class="col-md-12">
           Login via
           <div class="social-buttons">
-            <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-            <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+            <a href="https://www.facebook.com" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="https://www.twitter.com" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
           </div>
           or
-          <form class="form"  accept-charset="UTF-8" id="login-nav" #loginForm="ngForm" novalidate="true" (ngSubmit)="login()">
-            <div class="form-group">
-              <label class="sr-only" for="exampleInputEmail2">Email address</label>
+
+          <form class="form"  accept-charset="UTF-8" id="login-nav" #loginForm="ngForm"    novalidate="true" (ngSubmit)="login()">
+            <div class="form-group" ng-model="logged" >
+              <label class="sr-only" for="exampleInputEmail2" >Email address</label>
               <input type="text" class="form-control" id="exampleInputEmail2" placeholder="username" name="username" [(ngModel)]="username" required>
             </div>
             <div class="form-group">
@@ -30,13 +32,18 @@
               </label>
             </div>
           </form>
+          </div>
         </div>
         <div class="bottom text-center">
           New here ? <a href="register"><b>Join Us</b></a>
         </div>
-      </div>
     </li>
   </ul>
+  </div>
+  <div class="logoutForm" *ngIf="securityService.isAuthenticated()">
+    <a class="navbar-brand navbar-right bars" href="logout" (click)="logout()">log out</a>
+
+  </div>
 </div>
 
 

@@ -1,3 +1,12 @@
+.bar{
+  width:auto;
+  /*background: #9CA975;*/
+  /*background: #0c2231;*/
+  background: #121212;
+  border-bottom: thick solid black;
+  background-position: center;
+}
+
 
 #login-dp{
   min-width: 250px;
@@ -61,5 +70,6 @@ b {
 }
 
 .bars{
-  color:lightseagreen;
+  color:#d35400;
 }
+

@@ -1,12 +1,32 @@
-.add-button {
-  padding-top: 50px;
-  text-align: center;
+
+
+h2{
+  color:#d35400;
+  position: absolute;
+  top:80px;
+  left:50px;
+  z-index:1;
+
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
 }
 
-.btn{
-  font-size:20px;
-  height:40px;
-  width: auto;
-  background-color: lightseagreen;
+h4{
+  color:#d35400;
+  padding-top:65px;
+  margin-left:50px;
+  z-index:1;
 
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
 }
+
+/*#first {*/
+  /*position: absolute;*/
+  /*top:80px;*/
+  /*left:30px;*/
+  /*width:350px;*/
+  /*height:40px;*/
+  /*background-color:black;*/
+  /*z-index:0;*/
+  /*opacity:0.5;*/
+/*}*/
+

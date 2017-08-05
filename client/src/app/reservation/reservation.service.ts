@@ -5,7 +5,7 @@ import {Injectable} from "@angular/core";
 
 
 @Injectable()
-export class Reservationservice {
+export class ReservationService {
 
   constructor(private http: Http, private api: Api ) {
   }
@@ -15,8 +15,9 @@ export class Reservationservice {
       .map(response => response.json())
   }
 
-  addNewReservation(user:any):Observable<any>{
-    return this.http.post(this.api.reservationPage, user)
+  addNewReservation(reservation:any):Observable<any>{
+    return this.http.post(this.api.reservationPage, reservation)
 
   }
+
 }

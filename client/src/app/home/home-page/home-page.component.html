@@ -1,4 +1,5 @@
-
-<div class="add-button">
-<button class="btn" type="button" routerLink="./login" (click)="logout()">Wyloguj się</button>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<h2>Welcome to ParkApp</h2>
+<div class="conditionalPages" *ngIf="!securityService.isAuthenticated()">
+<h4>Log in and enjoy!</h4>
 </div>

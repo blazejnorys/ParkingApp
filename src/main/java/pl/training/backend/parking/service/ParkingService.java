@@ -28,7 +28,7 @@ public class ParkingService {
     public Parking getParkingId(long id){return parkingRepository.findOne(id);}
 
     public ResultPage<Parking> getAllParkings(int pageNumber, int pageSize) {
-        Page<Parking> carWashesPage = parkingRepository.findAll(new PageRequest(pageNumber, pageSize));
-        return new ResultPage<>(carWashesPage.getContent(), carWashesPage.getNumber(), carWashesPage.getTotalPages());
+        Page<Parking> parkingPage = parkingRepository.findAll(new PageRequest(pageNumber, pageSize));
+        return new ResultPage<>(parkingPage.getContent(), parkingPage.getNumber(), parkingPage.getTotalPages());
     }
 }

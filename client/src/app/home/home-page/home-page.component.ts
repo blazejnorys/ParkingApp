@@ -8,7 +8,9 @@ import {SecurityService} from "../../security/security.service";
 })
 export class HomePageComponent implements OnInit {
 
+
   constructor(private securityService: SecurityService) { }
+
 
   ngOnInit() {
   }

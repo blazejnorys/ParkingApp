@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Reservationservice} from "../reservation.service";
+import {ReservationService} from "../reservation.service";
 import {Router} from "@angular/router";
 
 @Component({
@@ -9,7 +9,7 @@ import {Router} from "@angular/router";
 })
 export class ReservationPageComponent implements OnInit {
 
-  constructor(private reservationService : Reservationservice, private router: Router) { }
+  constructor(private reservationService : ReservationService, private router: Router) { }
 
   private reservation = {
 

@@ -1,18 +1,17 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+<div class="bar">
 <div class="container-fluid">
-
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse" role="navigation">
-    <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-toggleable-md navbar-inverse" role="navigation">
 
     <!-- Brand -->
-    <a class="navbar-brand navbar-right bars" href="#">home</a>
-    <a class="navbar-brand navbar-right bars" href="parking">find parking</a>
-    <a class="navbar-brand navbar-right bars" href="reservation">make reservation</a>
+    <a class="navbar-brand navbar-right bars" href="home">home</a>
+    <div class="conditionalPages" *ngIf="securityService.isAuthenticated()">
+    <a class="navbar-brand navbar-right bars" href="parking">find slot & book</a>
+    <a class="navbar-brand navbar-right bars" href="reservation">check all reservations</a>
+    </div>
 
     <!-- Links -->
     <app-login-form></app-login-form>
   </nav>
+</div>
 </div>

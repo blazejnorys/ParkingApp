@@ -20,10 +20,10 @@ public class Reservation {
     long id;
 
     @Column (nullable = false)
-    private Date beginDate;
+    private Long beginDate;
 
     @Column (nullable = false)
-    private Date endDate;
+    private Long endDate;
 
     @ManyToOne
     private Parking parking;

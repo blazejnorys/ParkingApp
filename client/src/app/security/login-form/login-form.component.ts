@@ -18,6 +18,7 @@ export class LoginFormComponent implements OnInit {
   private password: string;
   loginError: boolean;
   pendingRequest = false
+  logged=false;
 
   ngOnInit() {
   }
@@ -28,6 +29,7 @@ export class LoginFormComponent implements OnInit {
       .subscribe(() => {
           console.log(this.securityService.isAuthenticated())
           this.router.navigateByUrl("/home")
+          this.logged=true;
         },
         () => {
           this.loginError = true
@@ -35,6 +37,11 @@ export class LoginFormComponent implements OnInit {
 
         })
   }
+
+  logout(){
+    this.securityService.logout();
+  }
+
 
 
 }
