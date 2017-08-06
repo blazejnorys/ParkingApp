@@ -5,6 +5,7 @@ import {RouterModule} from "@angular/router";
 import {HttpModule} from "@angular/http";
 import {FormsModule} from "@angular/forms";
 import {ReservationModule} from "../reservation/reservation.module";
+import {ParkingMapComponent} from "./parking-map/parking-map.component";
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import {ReservationModule} from "../reservation/reservation.module";
     RouterModule,
     ReservationModule
   ],
-  exports:[ParkingComponent],
-  declarations: [ParkingComponent]
+  exports:[ParkingComponent, ParkingMapComponent],
+  declarations: [ParkingComponent, ParkingMapComponent]
 })
 export class ParkingModule { }
