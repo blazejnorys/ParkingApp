@@ -7,13 +7,17 @@ import {RouterModule} from "@angular/router";
 import { HoursListComponent } from './hours-list/hours-list.component';
 import { NewReservationComponent } from './new-reservation/new-reservation.component';
 import { ParkingMapComponent } from './parking-map/parking-map.component';
+import {AgmCoreModule} from "@agm/core";
 
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCG0zO8WNzKWuNma7TLwCw9_EtYJyj17Lk'
+    })
   ],
   exports: [ReservationPageComponent,HoursListComponent, NewReservationComponent, ParkingMapComponent],
   declarations: [ReservationPageComponent, HoursListComponent, NewReservationComponent, ParkingMapComponent]
