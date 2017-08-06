@@ -29,8 +29,8 @@
       </tr>
       <tr class="active" *ngFor="let reservation of reservations">
         <td>{{reservation.id}}</td>
-        <td>{{reservation.beginDate}}</td>
-        <td>{{reservation.endDate}}</td>
+        <td>{{reservation.beginDate | date:'y-MM-dd HH:mm'}}</td>
+        <td>{{reservation.endDate | date:'y-MM-dd HH:mm'}}</td>
         <td>{{reservation.parking.location}}</td>
         <td>{{reservation.parking.name}}</td>
         <td>{{reservation.profile.name}}</td>

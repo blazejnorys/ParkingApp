@@ -1,8 +1,18 @@
-<p>
-  hours-list works!
-</p>
+
 <p style="color:lightseagreen">Wybrałeś parking nr {{id}}</p>
 
-<div class="add-button">
-  <button class="btn btn-primary" (click)="addReservation()">Zarezerwuj</button>
+
+<div class="reg">
+  <form #loginForm="ngForm" novalidate="true" (ngSubmit)="register()">
+    begin date:<br>
+    <input type="text" name="beginDate" placeholder="yyyy-MM-dd" [(ngModel)]="reservation.beginDate" required>
+    <br>
+    end date:<br>
+    <input type="text" name="endDate" placeholder="yyyy-MM-dd" [(ngModel)]="reservation.endDate" required>
+    <br>
+    <div class="add-button">
+      <button class="btn" (click)="addReservation()">Add reservation</button>
+    </div>
+  </form>
 </div>
+

@@ -21,10 +21,9 @@ export class ParkingMapComponent  implements OnInit{
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
     setMarkers(map);
-
   }
-
 }
+
 var parkingList = [
   ["Parking u Joli",52.237596, 20.969286,1,"8 pln/hr","00-24"],
   ["Parking dla najszybszych",52.215387, 20.971774,2,"6 pln/hr","8-22"],
@@ -58,15 +57,16 @@ function buildInfoWindow(marker,map,parking) {
     '<h6 id="firstHeading" class="firstHeading">' + String(parking[0])  + '</h6>' +
     '<br id="bodyContent" >' + 'Price: ' + String(parking[4])+
     '<br>'+'Opening hours: '+ String(parking[5])+'</br>'+
+      '<br>'+'<button class="btn btn-primary" routerLink="../newReservation/{{parking.id}}">Order</button>'+'</br>'+
     '</div>' +
     '</div>';
 
   var infowindow = new google.maps.InfoWindow({
     content: contentString
   });
+
   marker.addListener('click', function () {
     infowindow.open(map, marker);
-
     setTimeout(function () { infowindow.close(); }, 4000);
 
   });

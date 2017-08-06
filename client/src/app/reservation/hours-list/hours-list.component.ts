@@ -13,6 +13,7 @@ export class HoursListComponent {
   private id;
   private activeUser;
 
+
   private reservation = {
     parking: {
       id: -1,
@@ -25,8 +26,8 @@ export class HoursListComponent {
       name:"",
       surname:""
     },
-    beginDate: "2017-07-28T09:26:48.566Z",
-    endDate: "2017-07-28T09:26:48.566Z"
+    beginDate: "",
+    endDate: ""
   }
 
   constructor(private reservationService: ReservationService, private usersService: UsersService, private router: Router, private route: ActivatedRoute) {

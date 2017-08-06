@@ -1,3 +1,12 @@
 body{
-  -webkit-padding-start: 0px;
+  background-color: #363152;
+  height: 100%;
 }
+.background{
+  height: 700px;
+  background:url('./app/images/bg2.jpg') no-repeat;
+  background-size:cover;
+  background-position:center center;
+
+}
+
