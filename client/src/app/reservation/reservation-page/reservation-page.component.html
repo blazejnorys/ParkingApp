@@ -1,19 +1,6 @@
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <div class="reservation">
-<form #loginForm="ngForm" novalidate="true" (ngSubmit)="addReservation()">
-    Czas poczatkowy:<br>
-    <input type="text" name="beginDate" placeholder="begin time" [(ngModel)]="reservation.beginDate" required>
-    <br>
-    Czas koncowy:<br>
-    <input type="text" name="endDate" placeholder="end time" [(ngModel)]="reservation.endDate" required>
-    <br>
-
-    <div class="add-button">
-      <button class="btn">Add reservation</button>
-    </div>
-
-</form>
 
 
 
@@ -21,11 +8,11 @@
     <table class="table">
       <tr class="active">
         <th>ID</th>
-       <th>Czas początkowy</th>
-       <th>Czas końcowy</th>
-       <th>Parking lokalizacja</th>
-       <th>Parking nazwa</th>
-       <th>Nazwisko wynajmującego</th>
+       <th>Begind Date</th>
+       <th>End Date</th>
+       <th>Localisation</th>
+       <th>Parking name</th>
+       <th>Booked by</th>
       </tr>
       <tr class="active" *ngFor="let reservation of reservations">
         <td>{{reservation.id}}</td>

@@ -6,14 +6,15 @@
   <table class="table">
     <tr class="active">
       <th>ID</th>
-      <th>Parking lokalizacja</th>
-      <th>Parking nazwa</th>
+      <th>Parking localisation</th>
+      <th>Parking name</th>
+      <th>Booking</th>
     </tr>
     <tr class="active" *ngFor="let parking of parkings">
       <td>{{parking.id}}</td>
       <td>{{parking.location}}</td>
       <td>{{parking.name}}</td>
-      <td><button class="btn btn-primary" routerLink="../newReservation/{{parking.id}}">Order</button></td>
+      <td><button class="btn btn-primary" routerLink="../newReservation/{{parking.id}}">Book it!</button></td>
     </tr>
   </table>
 </div>

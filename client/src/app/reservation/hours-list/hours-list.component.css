@@ -1,12 +1,27 @@
-.add-button {
-  padding-top: 50px;
-  text-align: center;
-}
 
+p{
+  padding-top: 30px;
+  margin-left: 50px;
+  font-size:20px;
+  height:40px;
+  width: auto;
+  color:#d35400;
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
+
+}
 .btn{
   font-size:20px;
   height:40px;
   width: auto;
-  background-color: lightseagreen;
+  background-color:#d35400;
+
+}
+.reg{
+  font-size: 20px;
+  color:#d35400;
+  padding-top: 50px;
+  margin-left:50px;
+  width:230px;
+  text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
 
 }

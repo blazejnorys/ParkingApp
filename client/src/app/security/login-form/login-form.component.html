@@ -41,29 +41,8 @@
   </ul>
   </div>
   <div class="logoutForm" *ngIf="securityService.isAuthenticated()">
-    <a class="navbar-brand navbar-right bars" href="logout" (click)="logout()">log out</a>
+    <a class="navbar-brand navbar-right bars logout" href="logout" (click)="logout()">log out</a>
 
   </div>
 </div>
 
-
-
-
-<!--<form #loginForm="ngForm" novalidate="true" (ngSubmit)="login()">-->
-  <!--Login:<br>-->
-  <!--<input type="text" name="login" [(ngModel)]="username" required>-->
-  <!--<br>-->
-  <!--Password:<br>-->
-  <!--<input type="password" name="password" [(ngModel)]="password" required>-->
-  <!--<br><br>-->
-  <!--<div>-->
-    <!--<button [disabled]="loginForm.invalid || pendingRequest">Login</button>-->
-  <!--</div>-->
-
-
-<!--</form>-->
-<!--<input type="button" value="This is button link" onclick="window.location.href='../register'">-->
-
-<!--<div *ngIf="loginError">-->
-  <!--Invalid User or password-->
-<!--</div>-->

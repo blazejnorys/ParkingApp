@@ -1,5 +1,6 @@
 ///<reference path="../../../../node_modules/@types/googlemaps/index.d.ts"/>
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-parking-map',
@@ -10,6 +11,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class ParkingMapComponent  implements OnInit{
 
+  constructor( private router: Router){
+
+  }
   ngOnInit() {
 
     var mapProp = {
@@ -57,7 +61,7 @@ function buildInfoWindow(marker,map,parking) {
     '<h6 id="firstHeading" class="firstHeading">' + String(parking[0])  + '</h6>' +
     '<br id="bodyContent" >' + 'Price: ' + String(parking[4])+
     '<br>'+'Opening hours: '+ String(parking[5])+'</br>'+
-      '<br>'+'<button class="btn btn-primary" routerLink="../newReservation/{{parking.id}}">Order</button>'+'</br>'+
+      // '<br>'+'<button class="btn btn-primary" routerLink="../newReservation/1">Order</button>'+'</br>'+
     '</div>' +
     '</div>';
 
@@ -67,7 +71,9 @@ function buildInfoWindow(marker,map,parking) {
 
   marker.addListener('click', function () {
     infowindow.open(map, marker);
-    setTimeout(function () { infowindow.close(); }, 4000);
+    setTimeout(function () { infowindow.close(); }, 3000);
 
   });
+
+
 }

@@ -1,11 +1,11 @@
 
 .container {
-  padding-top: 250px;
+  padding-top: 130px;
 }
 
 .parking{
   font-size: 20px;
-  color:lightseagreen;
+  color:#d35400;
   padding-top: 50px;
   margin-left:50px;
 
@@ -15,14 +15,12 @@
   padding-top: 50px;
   margin-left: 20px;
 }
-.input {
-  background-color: #7f8c8d;
-}
+
 .btn{
   font-size:20px;
   height:40px;
   width: auto;
-  background-color: lightseagreen;
+  background-color: #d35400;
 }
 
 .table{

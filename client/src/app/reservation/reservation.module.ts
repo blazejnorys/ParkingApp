@@ -14,10 +14,7 @@ import {AgmCoreModule} from "@agm/core";
     CommonModule,
     HttpModule,
     FormsModule,
-    RouterModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCG0zO8WNzKWuNma7TLwCw9_EtYJyj17Lk'
-    })
+    RouterModule
   ],
   exports: [ReservationPageComponent,HoursListComponent, NewReservationComponent],
   declarations: [ReservationPageComponent, HoursListComponent, NewReservationComponent]

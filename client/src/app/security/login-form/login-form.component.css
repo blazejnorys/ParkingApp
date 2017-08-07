@@ -67,3 +67,10 @@ b {
 .dropdown-menu{
   border-radius: 20px;
 }
+
+.logout:hover
+{
+  text-decoration: none !important;
+  color:lightgreen !important;
+
+}

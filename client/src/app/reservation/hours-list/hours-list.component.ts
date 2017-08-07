@@ -42,7 +42,7 @@ export class HoursListComponent {
     this.reservationService.addNewReservation(this.reservation)
       .subscribe(() => {
         console.log(this.reservation)
-        this.router.navigateByUrl("")
+        this.router.navigateByUrl("/reservation")
       }, () => {
         console.log('failed')
       })
