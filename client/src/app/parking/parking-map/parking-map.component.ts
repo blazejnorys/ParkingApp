@@ -15,7 +15,6 @@ export class ParkingMapComponent  implements OnInit{
 
   }
   ngOnInit() {
-
     var mapProp = {
       center: new google.maps.LatLng(52.229833, 21.011643),
       zoom: 11,
@@ -61,7 +60,7 @@ function buildInfoWindow(marker,map,parking) {
     '<h6 id="firstHeading" class="firstHeading">' + String(parking[0])  + '</h6>' +
     '<br id="bodyContent" >' + 'Price: ' + String(parking[4])+
     '<br>'+'Opening hours: '+ String(parking[5])+'</br>'+
-      // '<br>'+'<button class="btn btn-primary" routerLink="../newReservation/1">Order</button>'+'</br>'+
+    // '<br>'+'<button class="btn btn-primary" routerLink="../newReservation/1">Order</button>'+'</br>'+
     '</div>' +
     '</div>';
 
@@ -74,6 +73,4 @@ function buildInfoWindow(marker,map,parking) {
     setTimeout(function () { infowindow.close(); }, 3000);
 
   });
-
-
 }

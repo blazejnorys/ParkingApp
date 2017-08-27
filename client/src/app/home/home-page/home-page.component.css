@@ -4,7 +4,7 @@ h2{
   color:#d35400;
   position: absolute;
   top:80px;
-  left:50px;
+  left:32px;
   z-index:1;
 
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000, 2px 2px #000;
@@ -13,7 +13,7 @@ h2{
 h4{
   color:#d35400;
   padding-top:65px;
-  margin-left:50px;
+  margin-left:32px;
   z-index:1;
 
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000, 2px 2px #000;

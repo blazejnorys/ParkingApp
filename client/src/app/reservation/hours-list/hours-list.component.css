@@ -12,8 +12,10 @@ p{
 .btn{
   font-size:20px;
   height:40px;
+  color:black;
   width: auto;
-  background-color:#d35400;
+  border:thin solid black;
+  background-color: #d35400;
 
 }
 .reg{
@@ -24,4 +26,8 @@ p{
   width:230px;
   text-shadow: 0px 0px 3px #000, -1px -1px #000, 1px 1px #000;
 
+}
+
+.add-button{
+  padding-top: 40px;
 }
